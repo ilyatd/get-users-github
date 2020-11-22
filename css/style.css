@@ -1,0 +1,121 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: gray;
+}
+
+input {
+  outline: none;
+}
+
+.results__pagination_radio,
+.results__filter_radio {
+  position: absolute;
+  left: -100vw;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  padding: 1% 2%;
+  background-color: #d2eddc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.search-users {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.search-users input {
+  padding: 3px 5px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.search-users_result-text span {
+  color: #5e5454;
+}
+
+.search-users_result-error {
+  color: #ff0000;
+}
+
+.search-users_submit:hover {
+  cursor: pointer;
+}
+
+.results {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: scroll;
+}
+
+.results__filter, .results__pagination {
+  margin: 10px 0;
+}
+
+.results__filter_text {
+  display: inline-block;
+}
+
+.results__filter_link, .results__pagination_link {
+  display: inline-block;
+  padding: 3px 5px;
+  font-weight: 700;
+  margin: 3px;
+}
+
+.results__filter_link:hover, .results__pagination_link:hover {
+  cursor: pointer;
+}
+
+.results__filter_radio:checked + p,
+.results__pagination_radio:checked + p {
+  color: #281aec;
+}
+
+.results__users {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  overflow-y: scroll;
+}
+
+.results__users__user {
+  padding: 3px 5px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin: 10px 0;
+  background-color: #f8f6f6;
+}
+
+.results__users__user_name:hover, .results__users__user_repos-count:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://kit.fontawesome.com/173c7323c3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Vue Router</title>
+</head>
+<body>
+    <div id="app">
+        <search-comp :users="$store.state.users" :error="$store.state.error"></search-comp>
+        <results-comp v-if="$store.state.users !== null" :users="$store.state.users"></results-comp>
+    </div>
+    
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuex/dist/vuex.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/search-component.js"></script>
+    <script src="js/results-component.js"></script>
+    <script src="js/users-component.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
